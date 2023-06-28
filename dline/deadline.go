@@ -1,6 +1,6 @@
 package dline
 
-import "github.com/filecoin-project/go-state-types/abi"
+import "github.com/CluEleSsUK/go-state-types/abi"
 
 // Deadline calculations with respect to a current epoch.
 // "Deadline" refers to the window during which proofs may be submitted.

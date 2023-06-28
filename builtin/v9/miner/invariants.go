@@ -1,15 +1,15 @@
 package miner
 
 import (
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/big"
+	"github.com/CluEleSsUK/go-state-types/builtin/v9/util"
 	addr "github.com/filecoin-project/go-address"
 	"github.com/filecoin-project/go-bitfield"
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/big"
-	"github.com/filecoin-project/go-state-types/builtin/v9/util"
 	"golang.org/x/xerrors"
 
-	"github.com/filecoin-project/go-state-types/builtin"
-	"github.com/filecoin-project/go-state-types/builtin/v9/util/adt"
+	"github.com/CluEleSsUK/go-state-types/builtin"
+	"github.com/CluEleSsUK/go-state-types/builtin/v9/util/adt"
 )
 
 type DealSummary struct {

@@ -3,10 +3,10 @@ package miner
 import (
 	"errors"
 
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/builtin"
-	"github.com/filecoin-project/go-state-types/builtin/v9/util/adt"
-	"github.com/filecoin-project/go-state-types/dline"
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/builtin"
+	"github.com/CluEleSsUK/go-state-types/builtin/v9/util/adt"
+	"github.com/CluEleSsUK/go-state-types/dline"
 	"golang.org/x/xerrors"
 )
 

@@ -1,10 +1,10 @@
 package datacap
 
 import (
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/big"
+	"github.com/CluEleSsUK/go-state-types/builtin"
 	"github.com/filecoin-project/go-address"
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/big"
-	"github.com/filecoin-project/go-state-types/builtin"
 )
 
 var InfiniteAllowance = big.Mul(big.MustFromString("1000000000000000000000"), builtin.TokenPrecision)

@@ -1,9 +1,9 @@
 package power
 
 import (
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/builtin/v8/util/smoothing"
 	addr "github.com/filecoin-project/go-address"
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/builtin/v8/util/smoothing"
 )
 
 // Storage miner actor constructor params are defined here so the power actor can send them to the init actor

@@ -5,11 +5,11 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/filecoin-project/go-state-types/network"
+	"github.com/CluEleSsUK/go-state-types/network"
 
 	"golang.org/x/xerrors"
 
-	"github.com/filecoin-project/go-state-types/big"
+	"github.com/CluEleSsUK/go-state-types/big"
 )
 
 // SectorNumber is a numeric identifier for a sector. It is usually relative to a miner.

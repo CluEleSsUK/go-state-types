@@ -3,10 +3,10 @@ package multisig
 import (
 	"bytes"
 
-	"github.com/filecoin-project/go-state-types/exitcode"
+	"github.com/CluEleSsUK/go-state-types/exitcode"
 
+	"github.com/CluEleSsUK/go-state-types/abi"
 	addr "github.com/filecoin-project/go-address"
-	"github.com/filecoin-project/go-state-types/abi"
 )
 
 type TxnID int64
@@ -21,12 +21,12 @@ type Transaction struct {
 	Approved []addr.Address
 }
 
-//Data for a BLAKE2B-256 to be attached to methods referencing proposals via TXIDs.
-//Ensures the existence of a cryptographic reference to the original proposal. Useful
-//for offline signers and for protection when reorgs change a multisig TXID.
+// Data for a BLAKE2B-256 to be attached to methods referencing proposals via TXIDs.
+// Ensures the existence of a cryptographic reference to the original proposal. Useful
+// for offline signers and for protection when reorgs change a multisig TXID.
 //
-//Requester - The requesting multisig wallet member.
-//All other fields - From the "Transaction" struct.
+// Requester - The requesting multisig wallet member.
+// All other fields - From the "Transaction" struct.
 type ProposalHashData struct {
 	Requester addr.Address
 	To        addr.Address

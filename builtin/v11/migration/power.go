@@ -3,18 +3,18 @@ package migration
 import (
 	"context"
 
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/builtin/v11/util/smoothing"
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/builtin/v11/util/smoothing"
 
+	power11 "github.com/CluEleSsUK/go-state-types/builtin/v11/power"
 	"github.com/filecoin-project/go-address"
-	power11 "github.com/filecoin-project/go-state-types/builtin/v11/power"
 
-	adt10 "github.com/filecoin-project/go-state-types/builtin/v10/util/adt"
+	adt10 "github.com/CluEleSsUK/go-state-types/builtin/v10/util/adt"
 
-	"github.com/filecoin-project/go-state-types/builtin"
-	power10 "github.com/filecoin-project/go-state-types/builtin/v10/power"
-	adt11 "github.com/filecoin-project/go-state-types/builtin/v11/util/adt"
-	"github.com/filecoin-project/go-state-types/migration"
+	"github.com/CluEleSsUK/go-state-types/builtin"
+	power10 "github.com/CluEleSsUK/go-state-types/builtin/v10/power"
+	adt11 "github.com/CluEleSsUK/go-state-types/builtin/v11/util/adt"
+	"github.com/CluEleSsUK/go-state-types/migration"
 	"github.com/ipfs/go-cid"
 	cbor "github.com/ipfs/go-ipld-cbor"
 	"golang.org/x/xerrors"

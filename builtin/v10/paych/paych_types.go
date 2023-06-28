@@ -3,10 +3,10 @@ package paych
 import (
 	"bytes"
 
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/big"
+	"github.com/CluEleSsUK/go-state-types/crypto"
 	addr "github.com/filecoin-project/go-address"
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/big"
-	"github.com/filecoin-project/go-state-types/crypto"
 )
 
 type UpdateChannelStateParams struct {

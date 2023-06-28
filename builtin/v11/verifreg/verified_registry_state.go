@@ -1,12 +1,12 @@
 package verifreg
 
 import (
-	"github.com/filecoin-project/go-state-types/builtin"
-	"github.com/filecoin-project/go-state-types/builtin/v11/util/adt"
+	"github.com/CluEleSsUK/go-state-types/builtin"
+	"github.com/CluEleSsUK/go-state-types/builtin/v11/util/adt"
 	cbg "github.com/whyrusleeping/cbor-gen"
 
+	"github.com/CluEleSsUK/go-state-types/abi"
 	"github.com/filecoin-project/go-address"
-	"github.com/filecoin-project/go-state-types/abi"
 	"github.com/ipfs/go-cid"
 	"golang.org/x/xerrors"
 )

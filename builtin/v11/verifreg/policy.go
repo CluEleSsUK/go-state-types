@@ -1,7 +1,7 @@
 package verifreg
 
 import (
-	"github.com/filecoin-project/go-state-types/builtin"
+	"github.com/CluEleSsUK/go-state-types/builtin"
 )
 
 const EndOfLifeClaimDropPeriod = 30 * builtin.EpochsInDay

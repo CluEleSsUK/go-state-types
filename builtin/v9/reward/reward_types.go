@@ -1,9 +1,9 @@
 package reward
 
 import (
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/builtin/v9/util/smoothing"
 	"github.com/filecoin-project/go-address"
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/builtin/v9/util/smoothing"
 )
 
 type AwardBlockRewardParams struct {

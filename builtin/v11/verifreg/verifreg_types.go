@@ -1,11 +1,11 @@
 package verifreg
 
 import (
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/big"
+	"github.com/CluEleSsUK/go-state-types/crypto"
+	"github.com/CluEleSsUK/go-state-types/exitcode"
 	addr "github.com/filecoin-project/go-address"
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/big"
-	"github.com/filecoin-project/go-state-types/crypto"
-	"github.com/filecoin-project/go-state-types/exitcode"
 	"github.com/ipfs/go-cid"
 	"github.com/multiformats/go-varint"
 )

@@ -2,26 +2,27 @@ package migration
 
 import (
 	"context"
+	abi2 "github.com/filecoin-project/go-state-types/abi"
 
-	"github.com/filecoin-project/go-state-types/exitcode"
+	"github.com/CluEleSsUK/go-state-types/exitcode"
 
-	adt9 "github.com/filecoin-project/go-state-types/builtin/v9/util/adt"
+	adt9 "github.com/CluEleSsUK/go-state-types/builtin/v9/util/adt"
 
 	"github.com/filecoin-project/go-address"
 	"github.com/filecoin-project/go-amt-ipld/v4"
 	"golang.org/x/xerrors"
 
+	"github.com/CluEleSsUK/go-state-types/builtin"
+	"github.com/CluEleSsUK/go-state-types/builtin/v8/market"
+	miner8 "github.com/CluEleSsUK/go-state-types/builtin/v8/miner"
+	adt8 "github.com/CluEleSsUK/go-state-types/builtin/v8/util/adt"
+	miner9 "github.com/CluEleSsUK/go-state-types/builtin/v9/miner"
 	commp "github.com/filecoin-project/go-commp-utils/nonffi"
-	"github.com/filecoin-project/go-state-types/builtin"
-	"github.com/filecoin-project/go-state-types/builtin/v8/market"
-	miner8 "github.com/filecoin-project/go-state-types/builtin/v8/miner"
-	adt8 "github.com/filecoin-project/go-state-types/builtin/v8/util/adt"
-	miner9 "github.com/filecoin-project/go-state-types/builtin/v9/miner"
 
 	"github.com/ipfs/go-cid"
 	cbor "github.com/ipfs/go-ipld-cbor"
 
-	"github.com/filecoin-project/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/abi"
 )
 
 // The minerMigrator performs the following migrations:
@@ -194,7 +195,7 @@ func (m minerMigrator) migratePrecommits(ctx context.Context, wrappedStore adt8.
 	var info miner8.SectorPreCommitOnChainInfo
 	err = oldPrecommitOnChainInfos.ForEach(&info, func(key string) error {
 		var unsealedCid *cid.Cid
-		var pieces []abi.PieceInfo
+		var pieces []abi2.PieceInfo
 		for _, dealID := range info.Info.DealIDs {
 			deal, err := m.proposals.GetDealProposal(dealID)
 			if err != nil {
@@ -207,14 +208,14 @@ func (m minerMigrator) migratePrecommits(ctx context.Context, wrappedStore adt8.
 				continue
 			}
 
-			pieces = append(pieces, abi.PieceInfo{
+			pieces = append(pieces, abi2.PieceInfo{
 				PieceCID: deal.PieceCID,
-				Size:     deal.PieceSize,
+				Size:     abi2.PaddedPieceSize(deal.PieceSize),
 			})
 		}
 
 		if len(pieces) != 0 {
-			commd, err := commp.GenerateUnsealedCID(info.Info.SealProof, pieces)
+			commd, err := commp.GenerateUnsealedCID(abi2.RegisteredSealProof(info.Info.SealProof), pieces)
 			if err != nil {
 				return xerrors.Errorf("failed to generate unsealed CID: %w", err)
 			}

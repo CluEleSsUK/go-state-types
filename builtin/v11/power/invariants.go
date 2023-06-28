@@ -1,14 +1,14 @@
 package power
 
 import (
+	"github.com/CluEleSsUK/go-state-types/abi"
+	"github.com/CluEleSsUK/go-state-types/big"
+	"github.com/CluEleSsUK/go-state-types/network"
 	"github.com/filecoin-project/go-address"
-	"github.com/filecoin-project/go-state-types/abi"
-	"github.com/filecoin-project/go-state-types/big"
-	"github.com/filecoin-project/go-state-types/network"
 
-	"github.com/filecoin-project/go-state-types/builtin"
-	"github.com/filecoin-project/go-state-types/builtin/v11/util/adt"
-	"github.com/filecoin-project/go-state-types/proof"
+	"github.com/CluEleSsUK/go-state-types/builtin"
+	"github.com/CluEleSsUK/go-state-types/builtin/v11/util/adt"
+	"github.com/CluEleSsUK/go-state-types/proof"
 )
 
 type MinerCronEvent struct {

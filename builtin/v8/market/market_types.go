@@ -1,9 +1,9 @@
 package market
 
 import (
+	"github.com/CluEleSsUK/go-state-types/abi"
 	addr "github.com/filecoin-project/go-address"
 	"github.com/filecoin-project/go-bitfield"
-	"github.com/filecoin-project/go-state-types/abi"
 	cbg "github.com/whyrusleeping/cbor-gen"
 )
 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/filecoin-project/go-state-types/manifest"
+	"github.com/CluEleSsUK/go-state-types/manifest"
 	gen "github.com/whyrusleeping/cbor-gen"
 )
 
