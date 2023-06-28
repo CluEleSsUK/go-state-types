@@ -5,6 +5,7 @@ import (
 	"crypto/sha256"
 	"errors"
 	"fmt"
+	"github.com/filecoin-project/go-state-types/builtin/v11/timelock"
 	"sync"
 	"testing"
 
@@ -138,6 +139,10 @@ func makeInputTree(ctx context.Context, t *testing.T, store adt.Store) cid.Cid {
 	// burnt funds
 	initializeActor(ctx, t, tree, store, &account.State{Address: builtin.BurntFundsActorAddr}, accountCid, builtin.BurntFundsActorAddr, big.Zero())
 
+	timelockState := timelock.ConstructState()
+	timelockCid, ok := actorsManifest.Get("timelock")
+
+	initializeActor(ctx, t, tree, store, timelockState, timelockCid, builtin.TimelockActorAddr, big.Zero())
 	root, err := tree.Flush()
 	require.NoError(t, err, "failed to flush actors tree")
 	return root

@@ -14,6 +14,7 @@ import (
 	"github.com/filecoin-project/go-state-types/builtin/v11/power"
 	"github.com/filecoin-project/go-state-types/builtin/v11/reward"
 	"github.com/filecoin-project/go-state-types/builtin/v11/system"
+	"github.com/filecoin-project/go-state-types/builtin/v11/timelock"
 	"github.com/filecoin-project/go-state-types/builtin/v11/util/smoothing"
 	"github.com/filecoin-project/go-state-types/builtin/v11/verifreg"
 	gen "github.com/whyrusleeping/cbor-gen"
@@ -307,6 +308,16 @@ func main() {
 		eam.Create2Params{},
 		eam.Create2Return{},
 		eam.CreateExternalReturn{},
+	); err != nil {
+		panic(err)
+	}
+
+	if err := gen.WriteTupleEncodersToFile("./builtin/v11/timelock/cbor_gen.go", "timelock",
+		// method params and returns
+		timelock.ConstructorParams{},
+		timelock.DecryptParams{},
+		timelock.DecryptionResult{},
+		timelock.State{},
 	); err != nil {
 		panic(err)
 	}

@@ -21,6 +21,7 @@ var (
 	// EthereumAddressManagerActorID is the actor ID of the Ethereum Address Manager singleton.
 	EthereumAddressManagerActorID   = uint64(10)
 	EthereumAddressManagerActorAddr = mustMakeAddress(EthereumAddressManagerActorID)
+	TimelockActorAddr               = mustMakeAddress(11)
 )
 
 const FirstNonSingletonActorId = 100

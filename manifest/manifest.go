@@ -15,10 +15,10 @@ import (
 )
 
 const (
-	AccountKey    = "account"
-	CronKey       = "cron"
-	InitKey       = "init"
-	MarketKey     = "storagemarket"
+	AccountKey     = "account"
+	CronKey        = "cron"
+	InitKey        = "init"
+	MarketKey      = "storagemarket"
 	MinerKey       = "storageminer"
 	MultisigKey    = "multisig"
 	PaychKey       = "paymentchannel"
@@ -31,6 +31,7 @@ const (
 	EamKey         = "eam"
 	PlaceholderKey = "placeholder"
 	EthAccountKey  = "ethaccount"
+	TimelockKey    = "timelock"
 )
 
 func GetBuiltinActorsKeys(av actorstypes.Version) []string {
@@ -51,7 +52,7 @@ func GetBuiltinActorsKeys(av actorstypes.Version) []string {
 		keys = append(keys, DatacapKey)
 	}
 	if av >= 10 {
-		keys = append(keys, EvmKey, EamKey, PlaceholderKey, EthAccountKey)
+		keys = append(keys, EvmKey, EamKey, PlaceholderKey, EthAccountKey, TimelockKey)
 	}
 	return keys
 }
