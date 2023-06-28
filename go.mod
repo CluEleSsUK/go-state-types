@@ -1,4 +1,4 @@
-module github.com/filecoin-project/go-state-types
+module github.com/CluEleSsUK/go-state-types
 
 go 1.13
 
